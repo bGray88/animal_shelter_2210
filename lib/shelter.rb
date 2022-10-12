@@ -9,10 +9,20 @@ attr_reader :name, :capacity, :pets
   end
 
   def add_pet(name)
-    pets << name
+    @pets << name
   end
 
   def call_pets
-    pets.map {|name| name.concat("!")}
+    @pets.map {|name| name.concat("!")}
+  end
+
+  def over_capacity?
+    @pets.length > @capacity
+  end
+
+  def adopt
+    while pets.length > capacity
+      pets.shift
+    end
   end
 end
