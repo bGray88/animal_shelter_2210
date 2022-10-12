@@ -21,8 +21,8 @@ attr_reader :name, :capacity, :pets
   end
 
   def adopt
-    while pets.length > capacity
-      pets.shift
+    while @pets.length > capacity
+      @pets.shift
     end
   end
 end
