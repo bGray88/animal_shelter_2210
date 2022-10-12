@@ -7,5 +7,12 @@ attr_reader :name, :capacity, :pets
     @capacity = capacity
     @pets = []
   end
-end
 
+  def add_pet(name)
+    pets << name
+  end
+
+  def call_pets
+    pets.map {|name| name.concat("!")}
+  end
+end
